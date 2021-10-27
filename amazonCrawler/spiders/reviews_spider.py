@@ -21,7 +21,7 @@ class ReviewsSpider(scrapy.Spider):
 
     def parse_reviews(self, response):
         for review in response.css('div.a-section.review.aok-relative'):
-            yield{
+            yield {
                 'profile-name': review.css('span.a-profile-name::text').get(),
                 'review-star-rating': review.css('span.a-icon-alt::text').get(),
                 'review-body': review.css('span.a-size-base.review-text.review-text-content span::text').getall(),

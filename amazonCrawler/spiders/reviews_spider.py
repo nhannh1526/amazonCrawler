@@ -3,6 +3,7 @@ import scrapy
 
 class ReviewsSpider(scrapy.Spider):
     name = "reviews"
+    allowed_domains = ['amazon.com']
 
     def start_requests(self):
         urls = [

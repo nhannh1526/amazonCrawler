@@ -7,8 +7,27 @@ class ReviewsSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
+            'https://www.amazon.com/dp/B09G9DKC87/ref=fs_a_iwp2_0',
+            'https://www.amazon.com/dp/B09G9BPWNP/ref=fs_a_iwp2_1',
+            'https://www.amazon.com/dp/B09G9CX7DK/ref=fs_a_iwp2_2',
+            'https://www.amazon.com/dp/B09G914NDC/ref=fs_a_iwp2_3',
+            'https://www.amazon.com/dp/B0932D45W8/ref=fs_a_ipadt2_us0',
+            'https://www.amazon.com/dp/B0932B5NVD/ref=fs_a_ipadt2_us1',
+            'https://www.amazon.com/dp/B08J66ZMY7/ref=fs_a_ipadt2_us2',
+            'https://www.amazon.com/dp/B09G9FPHY6/ref=fs_a_ipadt2_us3',
+            'https://www.amazon.com/dp/B09G91LXFP/ref=fs_a_ipadt2_us4',
+            'https://www.amazon.com/dp/B09HDZ5MKC/ref=fs_a_wt2_us0',
+            'https://www.amazon.com/dp/B09HF1DC1J/ref=fs_a_wt2_us1',
+            'https://www.amazon.com/dp/B09G993Q18/ref=fs_a_wt2_us2',
+            'https://www.amazon.com/dp/B09G96SSLB/ref=fs_a_wt2_us3',
+            'https://www.amazon.com/dp/B08PZHYWJS/ref=fs_a_mdt2_us0',
+            'https://www.amazon.com/dp/B09JQMJHXY/ref=fs_a_mdt2_us1',
+            'https://www.amazon.com/dp/B09JQL3NWT/ref=fs_a_mdt2_us2',
             'https://www.amazon.com/dp/B08N7LDM77/ref=fs_a_mbt2_us1',
             'https://www.amazon.com/dp/B08N7NV2KB/ref=fs_a_mbt2_us2',
+            'https://www.amazon.com/dp/B09JQL8KP9/ref=fs_a_mbt2_us3',
+            'https://www.amazon.com/dp/B09JQMW44C/ref=fs_a_mbt2_us4',
+            'https://www.amazon.com/dp/B0932FPBV8/?_encoding=UTF8&psc=1'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.get_all_reviews_url)
